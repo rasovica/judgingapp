@@ -1,18 +1,30 @@
 <template>
-  <div class="home">
-    <img src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div class="home-page">
+    <header class="fat-header">
+      <div id="nav">
+        <router-link to="/new" class="left lime-button">New post</router-link>
+        <input type="text" class="center" placeholder="Images, #tags, @users oh my!"/>
+        <router-link to="/login" class="right lime-button">Sign up</router-link>
+        <router-link to="/register" class="right white-link">Sign in</router-link>
+      </div>
+    </header>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+import JudgeImage from "@/components/JudgeImage.vue";
 
 @Component({
   components: {
-    HelloWorld
+    JudgeImage
   }
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+  mounted() {}
+}
 </script>
+
+<style lang="scss" scoped>
+
+</style>

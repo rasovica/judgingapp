@@ -1,0 +1,5 @@
+boto3
+voluptuous
+pillow
+lambda-packages
+pycrypto
